@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<title>PubKit Import Module</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+#import-form {
+	padding: 2em 5em;
+}
+
+#import-form .radio-button {
+	margin: 5px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="import-form">
+<h3>Import CSV resources &amp; SQL database tables</h3>
+[+errors+]
+<form method="get" >
+<input type="hidden" name="id" value="[+modId+]" />
+<input type="hidden" name="a" value="112" />
+
+<h4>CSV resources files</h4>
+<fieldset id="CSV-choice">
+[+fileChoice+]
+</fieldset>
+
+<hr />
+
+<h4>SQL tables files</h4>
+<fieldset id="SQL-choice">
+[+tableChoice+]
+</fieldset>
+ <hr />
+
+<input type="submit" value="Proceed" name="Go"/>
+</form>
+</div>
+</body>
+
+</html>
