@@ -22,7 +22,7 @@ To install manually:
 * Return to the main module editing screen Save the module. Prune the comments if it suits you.
 * Repeat the above steps to create '''ExportCSV'''.
 
-Note that new modules do not show in the Modules menu bar until you log out and log back in to the Manager.
+Note that new modules do not show in the Modules menu bar until you refresh the screen.
 
 The forms for entering parameters for these modules are stored in '''import.html''' and '''export.html'''. These contain placeholders in the usual format to preserve data. You can use chunks instead of the files if preferred. Simply copy the content of the HTML file into a chunk, and name the chunk as a module parameter called '''&formTpl''', e.g. '''&formTpl=Form template;string;import.form.tpl'''
 
