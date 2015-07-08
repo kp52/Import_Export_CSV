@@ -1,7 +1,7 @@
 <?php
 /******************************************
 ImportCSV (module)
-v1.0 Keith Penton, KP52, December 2012
+v1.1 Keith Penton, KP52, July 2015
 *******************************************/
 
 $importDir = $modx->config['base_path'] . 'assets/import/';
@@ -45,7 +45,7 @@ if (isset($_REQUEST['Go'])) {
 	$report = $html;
 	$ph = array(
 		'modId' => $modId, 
-		'fileChoice' => $fileChoice, 
+		'fileChoice' => $fileChoice,
 		'tableChoice' => $tableChoice
 		);
 
@@ -210,12 +210,12 @@ function processPages($dataFile) {
 		$doc->set('template', $rec[16]);
 		$doc->set('menuindex', $rec[17]);
 		$doc->set('menutitle', $modx->db->escape(htmlspecialchars($rec[29])));
-		$doc->set('hidemenu', $rec[36]);
+		$doc->set('hidemenu', $rec[34]);
 // populate TVs, saved as tvname=>value
-		$tvs = array_slice($rec, 37);
+		$tvs = array_slice($rec, 35);
 		while ($tv = array_shift($tvs)) {
 			$tvPair = explode('=>', $tv);
-			$tvName = 'tv' . $tvPair[0];
+			$tvName = $tvPair[0];
 			$doc->set($tvName, $modx->db->escape($tvPair[1]));
 		}
 		$doc->Save();
