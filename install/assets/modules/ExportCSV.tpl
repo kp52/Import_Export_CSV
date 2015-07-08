@@ -4,7 +4,7 @@
  * Export sub-tree as CSV file
  *
  * @category	module
- * @version		1.1
+ * @version		1.2
  * @internal	@modx_category Manager and Admin
  * @internal	@properties &exportDir=Export to;string;assets/site/ &exportFile=File;string;sitePages.csv &root=Root;int; &formTpl=Input Form;string;
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
@@ -12,13 +12,14 @@
 /**************************************************** 
 ExportCSV (module)
 
-v1.1 Keith Penton, KP52, December 2012
+v1.1 Keith Penton, KP52, July 2015
 
 Create CSV file from resource given as root and all its children
 Preserve data from site_content table, with template by name, plus 
 template variables listed by name with current values. Intended for use with 
 module ImportCSV to copy blocks of pages across sites. 
 NB export is complete set of table data, but import is selective.
+MODX keywords & metatags fields are dropped from site_content table
 
 Input: ID of root document (or -1 to export all resources);
 Export directory (full path, or path beginning "assets", slash is optional)
